@@ -36,6 +36,7 @@ namespace aspnetCoreReactTemplate.Services
             {
                 client.UseDefaultCredentials = false;
                 client.Credentials = new NetworkCredential(this.Options.username, this.Options.password);
+
                 client.EnableSsl = this.Options.enableSSL;
                 await client.SendMailAsync(mailMessage);
             }
